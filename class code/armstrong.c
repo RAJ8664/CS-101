@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-
 //armstrong of a number
 int main(){
 	int num,sum=0,digit,temp;
@@ -10,19 +9,15 @@ int main(){
 	temp=num;
 	while(temp!=0){
 		digit=temp%10;
-		sum=sum+(digit*digit*digit);
+		sum=sum+pow(digit,3);
 		temp=temp/10;
 	}
-	
-	if(sum==num)
+	if(sum==num){
 		printf("the number is armstrong\n");
-	
-	else
+	}
+		
+	else{
 		printf("the number is not armstrong\n");
-	
-
-
-
-
-
+	}
+		
 }
