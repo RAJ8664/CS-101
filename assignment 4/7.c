@@ -16,6 +16,7 @@ double sum(int arr1[],int arr2[],int n){
 int main(){
     int arr1[]={1,2,3};
     int arr2[]={2,3,4};
+    //if you want to add more element to the array please change the double data type to long double(in function sum above) or similar;
     int n=sizeof(arr1)/sizeof(arr1[0]);
     printf("the sum is:%lf",sum(arr1,arr2,n));
     return 0;
