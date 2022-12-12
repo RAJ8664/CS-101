@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 void reverse(int arr[],int n,int s,int e){
-    while(s<e{
+    while(s<e){
         int temp=arr[s];
         arr[s]=arr[e];
         arr[e]=temp;
-        s+=;
+        s++;
         e--;
     }
 }
@@ -14,15 +14,23 @@ void rotateleft(int arr[],int n,int k){
         return;
     }
     k=k%n;
-    reverse(arr,n,0,d-1);
-    reverse(arr,n,d,n-1);
-    reverse(arr,n),0,n-1;
+    reverse(arr,n,0,k-1);
+    reverse(arr,n,k,n-1);
+    reverse(arr,n,0,n-1);
 
 }
+void printarray(int arr[],int n){
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
 int main(){
-    int arr1[]={1,2,5};
-    int arr2[]={2,3,2};
-    int n=sizeof(arr1)/sizeof(arr1[0]);
-    printf("the sum is:%lf",sum(arr1,arr2,n));
+    int arr[]={1,2,5};
+    int k;
+    printf("enter the value of k:");
+    scanf("%d",&k);
+    int n=sizeof(arr)/sizeof(arr[0]);
+    rotateleft(arr,n,k);
+    printarray(arr,n);
     return 0;
 }
